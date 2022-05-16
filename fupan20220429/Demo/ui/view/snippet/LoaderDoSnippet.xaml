@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Demo.ui.view.snippet.LoaderDoSnippet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Demo.ui.view.snippet"
+             xmlns:snippet="clr-namespace:Demo.ui.view.snippet"
+            
+             xmlns:converter="clr-namespace:Demo.ui.view.converter" 
+             mc:Ignorable="d" 
+             HorizontalAlignment="Left" 
+             VerticalAlignment="Top"
+             d:DesignHeight="20" d:DesignWidth="60" Loaded="ld">
+
+    <Grid  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+        <Label x:Name="lblValue6"  HorizontalContentAlignment="Left" MouseUp="Btn_Switch_Click"></Label>
+    </Grid>  
+    
+</UserControl>

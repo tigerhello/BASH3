@@ -1,0 +1,49 @@
+﻿<Window x:Class="Demo.ui.view.dialog.EfficiencyOptionDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo.ui.view.dialog"
+        xmlns:widget="clr-namespace:Demo.ui.view.widget"
+        mc:Ignorable="d"
+        Title="Efficiency Option" Height="330" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Label Content="Baseline:" Margin="0,0,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <widget:SelectTextWidget Text="{Binding Baseline}" Margin="100,0,0,0" Padding="4,4,0,0" Width="200" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Left"/>
+            <!--<Label Content="Nick Name:" Margin="0,35,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <widget:SelectTextWidget Text="{Binding NickName}" Margin="100,35,0,0" Padding="4,4,0,0" Width="200" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Left"/>
+            
+            <Label Content="Password:" Margin="0,70,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="password" Margin="100,70,0,0" Padding="4,4,0,0" Width="200" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Label Content="Confirmation:" Margin="0,105,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="passwordConf" Margin="100,105,0,0" Padding="4,4,0,0" Width="200" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Label Content="Role:" Margin="0,140,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <ComboBox SelectedIndex="{Binding UserRole}" Margin="100,140,0,0" Padding="10,5,0,0" Width="200" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <ComboBoxItem Name="nil"></ComboBoxItem>
+                <ComboBoxItem Name="administraotr">Administraotr</ComboBoxItem>
+                <ComboBoxItem  Name="config">Config Engineer</ComboBoxItem>
+                <ComboBoxItem  Name="recipe">Recipe Engineer</ComboBoxItem>
+                <ComboBoxItem  Name="maintainent">Maintainent Engineer</ComboBoxItem>
+            </ComboBox>
+            -->
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Button  Content="Apply" Click="btnApply_Click" Margin="0,2,110,2" HorizontalAlignment="Right" Width="90" Height="26" />
+            <Button  Content="Cancel" Click="btnCanel_Click" Margin="0,2,10,2" HorizontalAlignment="Right" Width="90" Height="26" />
+        </Grid>
+     
+    </Grid>
+
+</Window>

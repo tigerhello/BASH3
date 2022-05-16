@@ -1,0 +1,48 @@
+﻿<Window x:Class="Demo.ui.view.dialog.JigEditDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo.ui.view.dialog"
+        xmlns:widget="clr-namespace:Demo.ui.view.widget"
+        mc:Ignorable="d"
+        Title="JigEditDlg" Height="330" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Label Content="Jig Status:" Margin="0,0,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <ComboBox ItemsSource="{Binding JigStatuNames}" SelectedIndex="{Binding JigStatus}" Margin="100,0,0,0" Padding="10,5,0,0" Width="200" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Jig ID:" Margin="0,35,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <widget:SelectTextWidget Text="{Binding JigIDs[0]}" Margin="100,35,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding JigIDs[1]}" Margin="200,35,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <Label Content="Boat ID:" Margin="0,70,0,0" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[0]}" Margin="100,70,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[5]}" Margin="200,70,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[1]}" Margin="100,100,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[6]}" Margin="200,100,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[2]}" Margin="100,130,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[7]}" Margin="200,130,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[3]}" Margin="100,160,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[8]}" Margin="200,160,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[4]}" Margin="100,190,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            <widget:SelectTextWidget Text="{Binding BoatIDs[9]}" Margin="200,190,0,0" Padding="0,4" Width="100" Height="30" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center"/>
+            
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Button  Content="Apply" Click="btnApply_Click" Margin="0,2,110,2" HorizontalAlignment="Right" Width="90" Height="26" />
+            <Button  Content="Cancel" Click="btnCanel_Click" Margin="0,2,10,2" HorizontalAlignment="Right" Width="90" Height="26" />
+        </Grid>
+     
+    </Grid>
+
+</Window>

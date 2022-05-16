@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="Demo.ui.view.card.FactoryInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Demo.ui.view.card"
+             xmlns:converter="clr-namespace:Demo.ui.view.converter"
+             xmlns:properties="clr-namespace:Demo.Properties"
+             xmlns:UC="clr-namespace:Demo.ui.view.snippet"
+             mc:Ignorable="d" 
+             HorizontalAlignment="Left" 
+             VerticalAlignment="Top"  d:DesignHeight="1800" d:DesignWidth="600">
+
+    <UserControl.Resources>
+        <Style x:Key="UCBlockStyle" TargetType="{x:Type UC:BPGreen}">
+            <Style.Setters>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style.Setters>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid Margin="0,0,0,0" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <UC:BPYellow x:Name="RUNNING" Grid.Row="0"  Grid.ColumnSpan="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MyProperty0="RUNNING" MyProperty1="" />
+        <UC:BPGray x:Name="RESULT" Grid.Row="2"  Grid.ColumnSpan="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MyProperty0="RESULT" MyProperty1="" />
+        <TextBox x:Name="richTextBox1" Grid.Row="3"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" MouseDoubleClick="CCTV_MouseDoubleClick" />
+
+        <Grid Grid.Row="1" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="353*"/>
+                <ColumnDefinition Width="247*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+
+            <UC:BPGreen x:Name="Project" Grid.ColumnSpan="2"  Style="{DynamicResource UCBlockStyle}"   Grid.Row="0"   MyProperty0="Project(项目)：" MyProperty1="" />
+            <UC:BPGreen x:Name="Line" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="1" MyProperty0="Line(线体)：" MyProperty1="" />
+            <UC:BPGreen x:Name="Shift" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="2"   MyProperty0="Shift(班别)：" MyProperty1="" />
+            <UC:BPGreen x:Name="Input" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="3"   MyProperty0="Input(投入)：" MyProperty1="" />
+            <UC:BPGreen x:Name="Output" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="4"   MyProperty0="Output(产出)：" MyProperty1="" />
+            <UC:BPGreen x:Name="IPQC" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}"  Grid.Row="5"   MyProperty0="IPQC：" MyProperty1="" />
+            <UC:BPGreen x:Name="NG" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="6"   MyProperty0="NG(不良)：" MyProperty1="" />
+            <UC:BPGreen x:Name="Yield" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="7"  MyProperty0="Yield(良率)：" MyProperty1="" />
+            <UC:BPGreen x:Name="Product1" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="8"   MyProperty0="Product 1：" MyProperty1="" />
+            <UC:BPGreen x:Name="Product2" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="9"  MyProperty0="Product 2：" MyProperty1="" />
+            <UC:BPGreen x:Name="Product3" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="10"   MyProperty0="Product 3：" MyProperty1="" />
+            <UC:BPGreen x:Name="Product4" Grid.ColumnSpan="2" Style="{DynamicResource UCBlockStyle}" Grid.Row="11"   MyProperty0="Product 4：" MyProperty1="" />
+        </Grid>
+
+    </Grid>
+</UserControl>

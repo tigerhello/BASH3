@@ -1,0 +1,290 @@
+﻿<UserControl x:Class="Demo.ui.view.card.TubeNavigatorCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Demo.ui.view.card"
+             xmlns:converter="clr-namespace:Demo.ui.view.converter"
+             xmlns:properties="clr-namespace:Demo.Properties"
+             mc:Ignorable="d" 
+             HorizontalAlignment="Left" 
+             VerticalAlignment="Top"  d:DesignHeight="150" d:DesignWidth="1800" IsEnabled="True">
+    <UserControl.Resources>
+        <converter:NavBtnColorConverter x:Key="navBtnColorConverter" />
+        <Style x:Key="TubeNavBtn" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="150" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderBrush" Value="{x:Null}" />
+            <Setter Property="Foreground" Value="{x:Null}" />
+            <Setter Property="Background" Value="{x:Null}" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="0,0,0,0" Background="White">
+            <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Click="btnMonitor_Click" Style="{StaticResource TubeNavBtn}" IsEnabled="False">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/images/home.jpg" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding WorkspaceIndex}" Value="0">
+                                <Setter Property="Source" Value="/Demo;component/images/home1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="2" Click="btnMaint_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/images/set.jpg" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding WorkspaceIndex}" Value="1">
+                                    <Setter Property="Source" Value="/Demo;component/images/set1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+           
+            </StackPanel>
+        </Button>
+
+
+
+        <Button Grid.Row="0" Grid.Column="8"  Click="btnTrend_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/images/chart.jpg" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding WorkspaceIndex}" Value="5">
+                                    <Setter Property="Source" Value="/Demo;component/images/chart1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+    
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="4"  Click="btnTrend_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/image2/pho.png" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding WorkspaceIndex}" Value="5">
+                                    <Setter Property="Source" Value="/Demo;component/images/chart1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="6"  Click="btnAlarm_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/images/alarm.jpg" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding WorkspaceIndex}" Value="7">
+                                    <Setter Property="Source" Value="/Demo;component/images/alarm1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+    
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="10"  Click="btnAlarm_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/image2/FN.png" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding WorkspaceIndex}" Value="7">
+                                    <Setter Property="Source" Value="/Demo;component/images/alarm1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="12"  Click="btnAlarm_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/image2/FileSearch.png" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding WorkspaceIndex}" Value="7">
+                                    <Setter Property="Source" Value="/Demo;component/images/alarm1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="14"  Click="btnStart_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/images/start.jpg" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding LoaderIndex}" Value="9">
+                                    <Setter Property="Source" Value="/Demo;component/images/start1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="16"  Click="btnPause_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/images/pause.jpg" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding LoaderIndex}" Value="10">
+                                    <Setter Property="Source" Value="/Demo;component/images/pause1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+               
+            </StackPanel>
+        </Button>
+        
+        
+        <Button Grid.Row="0" Grid.Column="18"  Click="btnClear_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/images/stop.jpg" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding LoaderIndex}" Value="11">
+                                    <Setter Property="Source" Value="/Demo;component/images/stop1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+            </StackPanel>
+        </Button>
+
+
+        <Button Grid.Row="0" Grid.Column="20"  Click="btnClear_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/image2/fresh.png" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding LoaderIndex}" Value="11">
+                                    <Setter Property="Source" Value="/Demo;component/images/stop1.jpg" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="22"  Click="btnLogin_Click" Style="{StaticResource TubeNavBtn}">
+            <StackPanel>
+                <Image  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Demo;component/image2/login.png" />
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding LogIndex}" Value="1">
+                                    <Setter Property="Source" Value="/Demo;component/image2/login.png" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+  
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</UserControl>
